@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дмитрий Виноградов](https://up.htmlacademy.ru/adaptive/16/user/839417).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Колесников](https://htmlacademy.ru/profile/m1roku).
 
 ---
 
