@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: PINK</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <button class="main-menu__btn" type="button">Закрыть</button>
+            <a class="main-menu__link" href="index.html">Pink</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link">Конкурс</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="intro">
+        <h1 class="intro__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </section>
+
+      <section class="form">
+        <h2 class="visually-hidden">Заполните форму</h2>
+        <p class="form__title">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        </p>
+        <form action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <p class="">
+              <label for="second-name">Фамилия:</label>
+              <input type="text" name="second-name" id="second-name" value="" placeholder="Укажите вашу фамилию *">
+            </p>
+            <p class="">
+              <label for="first-name">Имя:</label>
+              <input type="text" name="first-name" id="first-name" value="" placeholder="Введите ваше имя *">
+            </p>
+            <p class="">
+              <label for="third-name">Отчество:</label>
+              <input type="text" name="third-name" id="third-name" value="" placeholder="Ну и отчество тоже">
+            </p>
+          </fieldset>
+          <fieldset class="fieldset-checkbox">
+            <legend>Ваши безбашенные достижения в путешествии</legend>
+            <p>
+              <input type="checkbox" name="shark" id="shark" checked>
+              <label for="shark">Сделал селфи с акулой</label>
+            </p>
+            <p>
+              <input type="checkbox" name="beach" id="beach" checked>
+              <label for="beach">Обгорел на пляже</label>
+            </p>
+            <p>
+              <input type="checkbox" name="norris" id="norris">
+              <label for="shark">Видел Чака Норриса</label>
+            </p>
+            <p>
+              <input type="checkbox" name="souvenir" id="souvenir">
+              <label for="shark">Накупил сувениров</label>
+            </p>
+            <p>
+              <input type="checkbox" name="noggin" id="noggin" checked>
+              <label for="shark">Удержал башню</label>
+            </p>
+            <p>
+              <input type="checkbox" name="hotel" id="hotel">
+              <label for="shark">Разгромил отель</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <p class="">
+              <label for="phone">Номер телефона</label>
+              <input type="text" name="phone" id="phone" value="" placeholder="Номер, пожалуйста">
+            </p>
+            <p class="">
+              <label for="mail">Адрес почты</label>
+              <input type="text" name="mail" id="mail" value="" placeholder="Введите вашу почту *">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>С каким приложением путешествовали?</legend>
+            <p class="">
+              <input type="radio" name="application" value="ios" id="application-ios">
+              <label for="application-ios" class="">Pink для iOS</label>
+            </p>
+            <p class="">
+              <input type="radio" name="application" value="android" id="application-android">
+              <label for="application-android" class="">Pink на Android</label>
+            </p>
+            <p class="">
+              <input type="radio" name="application" value="windows" id="application-windows">
+              <label for="application-windows" class="">Windows Phone</label>
+            </p>
+          </fieldset>
+          <p>
+            Опишите свои эмоции
+          </p>
+          <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <p>
+            <button type="submit">Отправить</button>
+          </p>
+        </form>
+        <p>
+          <span>*</span> — обязательные поля
+        </p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p class="page-footer__logo">
+        <a class="page-footer__logo-link" href="index.html">Pink</a>
+      </p>
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <a class="page-footer__link page-footer__link--twitter" href="#">Твиттер</a>
+        </li>
+        <li class="page-footer__item">
+          <a class="page-footer__link page-footer__link--facebook" href="#">Фейсбук</a>
+        </li>
+        <li class="page-footer__item">
+          <a class="page-footer__link page-footer__link--youtube" href="#">Ютуб-канал</a>
+        </li>
+      </ul>
+      <p class="page-footer__copyright">
+        <span>Разработано </span>
+        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="#" alt="Логотип HTML Academy" width="27" height="34">
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
