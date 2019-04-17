@@ -6,35 +6,42 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
-      <nav class="main-menu">
-        <ul class="main-menu__list">
-          <li class="main-menu__item">
-            <button class="main-menu__btn" type="button">Закрыть</button>
-            <a class="main-menu__link" href="#">Pink</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Главная</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__container">
+        <nav class="menu menu--colored">
+          <ul class="menu__list menu__list--logo">
+            <li class="menu__item menu__item--logo">
+              <button class="menu__btn" type="button">Закрыть</button>
+              <a class="menu__link menu__link--logo" href="#">Pink</a>
+            </li>
+          </ul>
+          <ul class="menu__list menu__list--site">
+            <li class="menu__item menu__item--hidden">
+              <a class="menu__link" href="#">Главная</a>
+            </li>
+            <li class="menu__item menu__item--hidden">
+              <a class="menu__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="menu__item menu__item--hidden">
+              <a class="menu__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="menu__item menu__item--hidden">
+              <a class="menu__link" href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Приложение Pink</h1>
       <section class="download">
-        <h2 class="visually-hidden">Скачать приложение</h2>
-        <button class="download__btn">Скачать приложение</button>
-        <p class="">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+        <div class="download__bg">
+          <div class="download__menu">
+          <h2 class="visually-hidden">Скачать приложение</h2>
+          <button class="download__btn">Скачать приложение</button>
+          <p class="">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+        </div>
       </section>
 
       <section class="features">
@@ -147,5 +154,6 @@
         </div>
       </section>
     </main>
+    <script src="js/menu.js"></script>
   </body>
 </html>

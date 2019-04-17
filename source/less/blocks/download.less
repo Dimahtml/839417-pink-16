@@ -1,5 +1,8 @@
+// * * * * * * * * * * M O B I L E * * * * * * * * * *
+
 .download {
-  padding: 20px 28px;
+  margin-top: -72px;
+  padding: 0;
 
   color: #ffffff;
   background-color: #1d2631;
@@ -7,6 +10,7 @@
 
 .download__btn {
   padding: 15px 20px;
+  margin-top: 490px;
 
   color: #ffffff;
   background-color: transparent;
@@ -19,4 +23,35 @@
   border-top-right-radius: 23px 28px;
   border-bottom-right-radius: 23px 28px;
   border-bottom-left-radius: 23px 28px;
+}
+
+.download__bg {
+  min-height: 462px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .download__bg {
+    min-height: 729px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .download {
+    margin-top: -110px;
+  }
+
+  .download__bg {
+    min-height: 853px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+  }
 }
