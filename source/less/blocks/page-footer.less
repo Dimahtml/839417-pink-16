@@ -1,2 +1,44 @@
-// page-footer.less
-// page-footer.less
+.page-footer {
+  display: none;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: block;
+  }
+
+  .page-footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 620px;
+
+        border: 1px solid red;
+  }
+
+  .page-footer__logo {
+    width: 150px;
+  }
+
+  .page-footer__list {
+    display: flex;
+    flex-direction: row;
+    .reset-list();
+    width: 180px;
+  }
+
+  .page-footer__copyright {
+    width: 150px;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .page-footer__container {
+    width: 940px;
+  }
+}

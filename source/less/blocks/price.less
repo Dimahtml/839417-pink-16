@@ -1,8 +1,24 @@
+.price {
+  background-color: @light-grey;
+}
+
+.price__container {
+  margin: 0;
+  overflow: hidden;
+
+  // border: 1px solid orange;
+  border-bottom: 2px solid #e5e5e5;
+}
+
 .price__table {
   border-collapse: collapse;
+
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .price__header {
+
   color: #ffffff;
   background-color: @dark-grey;
 
@@ -24,13 +40,48 @@
   border: none;
 }
 
+.price__header--active {
+  display: block;
+  margin: 0 20px;
+  // width: 100%;
+  border: none;
+}
+
+// .price__header--active::before,
+// .price__header--active::after {
+//   display: block;
+//   width: 20px;
+//   height: 80px;
+//   content: "";
+//   background-color: pink;
+// }
+
+// .price__header--active::before {
+//   position: absolute;
+//   left: 0px;
+// }
+
+// .price__header--active::before {
+//   position: absolute;
+//   right: 0px;
+// }
+
 .price__data {
+  // width: 320px;
+
   font-size: 14px;
   line-height: 30px;
   color: @dark-grey;
   text-transform: uppercase;
 
   border: 2px solid #e5e5e5;
+  border-bottom: none;
+}
+
+.price__data--active {
+  display: block;
+  margin: 0 20px;
+  // width: 100%;
 }
 
 .price__rate-name {
@@ -46,4 +97,16 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+
 }
