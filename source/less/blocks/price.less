@@ -5,7 +5,7 @@
 .price__container {
   margin: 0 auto;
   overflow: hidden;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 .price__table {
@@ -28,18 +28,75 @@
 .price__data {
   min-width: 280px;
   min-height: 50px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: @dark-grey;
+
+  border: 1px solid #e5e5e5;
 }
 
 .price__data--header {
+  position: relative;
+  box-sizing: border-box;
   min-height: 100px;
-  background-color: @dark-grey;
+  padding: 20px;
+  padding-bottom: 12px;
+
   color: #ffffff;
   text-align: center;
+  text-transform: uppercase;
+
+  background-color: @dark-grey;
+  border: 1px solid #e5e5e5;
 }
 
-.price__data,
-.price__header {
-  border: 1px solid #e5e5e5;
+.price__rate-name {
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.price__rate-name--hit::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 74px;
+  height: 73px;
+
+  background-image: url("../img/bg-hit.svg");
+}
+
+.price__rate-name--hit::after {
+  content: "хит";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 74px;
+  height: 73px;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  transform: rotate(-45deg);
+}
+
+.price__rate-price {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.price__data--empty {
+  background-color: #f2f2f2;
+  border: none;
 }
 
 .price__slider {
@@ -51,11 +108,73 @@
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
 
 @media (min-width: @tablet-width) {
+  .price__container {
+    padding: 0;
+    width: 620px;
 
+    overflow: visible;
+  }
+
+  .price__table {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  .price__column {
+    flex-shrink: 0;
+    width: 25%;
+
+    background-color: #ffffff;
+  }
+
+  .price__data {
+    min-width: 0px;
+    min-height: 50px;
+  }
+
+  .price__data--header {
+    min-height: 78px;
+  }
+
+  .price__rate-name {
+
+    font-size: 16px;
+  }
+
+  .price__rate-name--hit::before {
+    width: 61px;
+    height: 61px;
+
+    background-image: url("../img/bg-hit-tablet.svg");
+  }
+
+  .price__rate-name--hit::after {
+    top: 2px;
+    left: 2px;
+  }
+
+  .price__rate-price {
+    font-size: 18px;
+  }
 }
 
 // * * * * * * * * * * D E S K T O P * * * * * * * * * *
 
 @media (min-width: @desktop-width) {
+  .price__container {
+    width: 940px;
+  }
 
+  .price__data {
+    font-size: 18px;
+  }
+
+  .price__rate-name {
+    font-size: 18px;
+  }
+
+  .price__rate-price {
+    font-size: 24px;
+  }
 }
