@@ -186,39 +186,47 @@
 
       <section class="img-upload">
         <h2 class="visually-hidden">Загрузить фотографию</h2>
-        <p class="upload__title">
-          Затмите их всех! Выкладывайте все, что накопилось в телефоне!
-        </p>
-        <form class="img-upload__form" method="post" action="https://echo.htmlacademy.ru">
-          <img class="img-upload__picture" src="#" alt="Предварительный просмотр фотографии" width="280" height="374">
-          <div class="img-upload__filters">
-            <ul class="img-upload__list">
-              <li class="img-upload__item">
-                <input type="radio" class="upload__radio visually-hidden" name="effect" id="effect-crop" value="crop">
-                <label for="effect-crop" class="img-upload__effects">
-                  Обрезать
-                </label>
-                <input type="range" class="upload__range upload__range--active">
-              </li>
-              <li class="img-upload__item">
-                <input type="radio" class="upload__radio visually-hidden" name="effect" id="effect-fill" value="fill">
-                <label for="effect-fill" class="img-upload__effects">
-                  Заливка
-                </label>
-                <input type="range" class="upload__range">
-              </li>
-              <li class="img-upload__item">
-                <input type="radio" class="upload__radio visually-hidden" name="effect" id="effect-contrast" value="contrast">
-                <label for="effect-contrast" class="img-upload__effects">
-                  Контраст
-                </label>
-                <input type="range" class="upload__range">
-              </li>
-            </ul>
-          </div>
-          <button class="img-upload__submit" type="submit">Запостить</button>
-          <button class="img-upload__reset" type="reset">Отмена</button>
-        </form>
+        <div class="img-upload__title-wrapper">
+          <p class="img-upload__title">
+            Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!
+          </p>
+        </div>
+        <div class="img-upload__container">
+          <form class="img-upload__form" method="post" action="https://echo.htmlacademy.ru">
+            <img class="img-upload__picture" src="../img/photo-road-mobile@1x.jpg" alt="Предварительный просмотр фотографии" width="280" height="374">
+            <div class="img-upload__controls">
+              <div class="img-upload__filters">
+                <ul class="img-upload__list">
+                  <li class="img-upload__item">
+                    <input type="radio" class="upload__radio visually-hidden" name="effect" id="effect-crop" value="crop">
+                    <label for="effect-crop" class="img-upload__effects">
+                      Обрезать
+                    </label>
+                    <input type="range" class="upload__range upload__range--active">
+                  </li>
+                  <li class="img-upload__item">
+                    <input type="radio" class="upload__radio visually-hidden" name="effect" id="effect-fill" value="fill">
+                    <label for="effect-fill" class="img-upload__effects">
+                      Заливка
+                    </label>
+                    <input type="range" class="upload__range">
+                  </li>
+                  <li class="img-upload__item">
+                    <input type="radio" class="upload__radio visually-hidden" name="effect" id="effect-contrast" value="contrast">
+                    <label for="effect-contrast" class="img-upload__effects">
+                      Контраст
+                    </label>
+                    <input type="range" class="upload__range">
+                  </li>
+                </ul>
+              </div>
+              <div class="img-upload__buttons">
+                <button class="img-upload__submit" type="submit">Запостить</button>
+                <button class="img-upload__reset" type="reset">Отмена</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="page-footer">

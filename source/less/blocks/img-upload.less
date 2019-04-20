@@ -1,3 +1,109 @@
+.img-upload {
+  background-color: @light-grey;
+}
+
+.img-upload__title-wrapper {
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  background-color: #ffffff;
+}
+
+.img-upload__title {
+  margin: 0 auto;
+  width: 280px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: @dark-grey;
+  text-align: center;
+
+      border: 1px solid red;
+}
+
+.img-upload__container {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 280px;
+
+  background-color: @light-grey;
+      border: 1px solid aqua;
+}
+
 .img-upload__list {
   .reset-list();
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .img-upload {
+    background-color: #ffffff;
+  }
+
+  .img-upload__title {
+    width: 430px;
+    font-size: 18px;
+  }
+
+  .img-upload__container {
+    padding-top: 55px;
+    width: 620px;
+  }
+
+  .img-upload__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .img-upload__picture {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+        border: 1px solid brown;
+  }
+
+  .img-upload__controls {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+        border: 1px solid brown;
+  }
+
+  .img-upload__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+
+  .img-upload__submit {
+    margin-bottom: 25px;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .img-upload__container {
+    padding-right: 60px;
+    padding-left: 80px;
+    width: 800px;
+  }
+
+  .img-upload__controls {
+    width: 410px;
+  }
+
+  .img-upload__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .img-upload__submit {
+    margin: 0;
+  }
 }
