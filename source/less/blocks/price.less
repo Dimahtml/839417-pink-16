@@ -1,16 +1,52 @@
-th, td, tr, table {
-  display: block;
+.price {
+  background-color: #f2f2f2;
 }
 
-.price__data,
-.price__header {
-  border: 1px solid blue;
+.price__container {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 50px;
 }
 
 .price__table {
   display: flex;
   flex-direction: row;
+
+  position: relative;
+  left: 0;
+  display: flex;
+  transform: translateX(-200%);
 }
+
+.price__column {
+  flex-shrink: 0;
+  width: 100%;
+
+  background-color: #ffffff;
+}
+
+.price__data {
+  min-width: 280px;
+  min-height: 50px;
+}
+
+.price__data--header {
+  min-height: 100px;
+  background-color: @dark-grey;
+  color: #ffffff;
+  text-align: center;
+}
+
+.price__data,
+.price__header {
+  border: 1px solid #e5e5e5;
+}
+
+.price__slider {
+  margin: 0 auto;
+  width: 60px;
+}
+
 
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
 
