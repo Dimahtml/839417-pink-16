@@ -1,102 +1,15 @@
-.price {
-  background-color: @light-grey;
+th, td, tr, table {
+  display: block;
 }
 
-.price__container {
-  margin: 0;
-  overflow: hidden;
-
-  // border: 1px solid orange;
-  border-bottom: 2px solid #e5e5e5;
+.price__data,
+.price__header {
+  border: 1px solid blue;
 }
 
 .price__table {
-  border-collapse: collapse;
-
-  width: 100%;
-  background-color: #ffffff;
-}
-
-.price__header {
-
-  color: #ffffff;
-  background-color: @dark-grey;
-
-  border-bottom: 2px solid @dark-grey;
-  border-left: 2px solid #e5e5e5;
-}
-
-.price__header:nth-child(2) {
-  border-left: 2px solid @dark-grey;
-  border-bottom: 2px solid @dark-grey;
-}
-
-.price__header:last-child {
-  border-right: 2px solid @dark-grey;
-}
-
-.price__header--clear {
-  background-color: transparent;
-  border: none;
-}
-
-.price__header--active {
-  display: block;
-  margin: 0 20px;
-  // width: 100%;
-  border: none;
-}
-
-// .price__header--active::before,
-// .price__header--active::after {
-//   display: block;
-//   width: 20px;
-//   height: 80px;
-//   content: "";
-//   background-color: pink;
-// }
-
-// .price__header--active::before {
-//   position: absolute;
-//   left: 0px;
-// }
-
-// .price__header--active::before {
-//   position: absolute;
-//   right: 0px;
-// }
-
-.price__data {
-  // width: 320px;
-
-  font-size: 14px;
-  line-height: 30px;
-  color: @dark-grey;
-  text-transform: uppercase;
-
-  border: 2px solid #e5e5e5;
-  border-bottom: none;
-}
-
-.price__data--active {
-  display: block;
-  margin: 0 20px;
-  // width: 100%;
-}
-
-.price__rate-name {
-  margin: 0;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
-  text-transform: uppercase;
-}
-
-.price__rate-price {
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
