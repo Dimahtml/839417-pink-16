@@ -2,10 +2,56 @@
   display: none;
 }
 
+.page-footer__container {
+  width: 280px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+        border: 1px solid green;
+}
+
+.page-footer__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .reset-list();
+
+          border: 1px solid red;
+}
+
+.page-footer__item {
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__logo {
+  text-align: center;
+}
+
+.page-footer__link {
+  path {
+    fill: @pink;
+  }
+}
+
+.page-footer__link--academy {
+  margin-left: 15px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+            border: 1px solid aqua;
+}
+
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
 
 @media (min-width: @tablet-width) {
-  .page-footer {
+  .page-footer--index {
     display: block;
   }
 
@@ -13,7 +59,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
     width: 620px;
 
         border: 1px solid red;
@@ -26,11 +71,13 @@
   .page-footer__list {
     display: flex;
     flex-direction: row;
-    .reset-list();
+    align-items: center;
+
     width: 180px;
   }
 
   .page-footer__copyright {
+    align-items: center;
     width: 150px;
   }
 }
