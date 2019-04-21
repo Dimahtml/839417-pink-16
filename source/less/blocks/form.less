@@ -1,2 +1,147 @@
-// form.less
-// form.less
+.form__title {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 50px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: @dark-grey;
+  text-align: center;
+}
+
+.form__title span {
+  display: none;
+}
+
+.form__fieldset {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 40px;
+
+  border: none;
+}
+
+// .form__fieldset-name {
+//   width: 280px;
+//   margin: 0 auto;
+
+//   border: none;
+// }
+
+.form__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__item label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.form__item input {
+  width: 100%;
+  padding: 15px 20px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: @dark-grey;
+}
+
+.form__legend {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: @pink;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__application-wrapper {
+  width: 100%;
+  background-color: @light-grey;
+}
+
+.form__fieldset-application {
+
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .form__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__title {
+    width: 500px;
+    padding-top: 95px;
+
+    font-size: 18px;
+  }
+
+  .form__title span {
+    display: inline;
+  }
+
+  .form__fieldset {
+    width: 620px;
+    border: 2px solid #e5e5e5;
+  }
+
+  .form__fieldset--name {
+    order: -2;
+    border: none;
+  }
+
+  .form__item {
+    align-items: center;
+  }
+
+  .form__item input {
+    flex-grow: 1;
+    width: auto;
+    margin-left: 20px;
+  }
+
+  .form__application-wrapper {
+    order: -1;
+    width: auto;
+
+    background-color: #ffffff;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .form__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    width: 940px;
+  }
+
+
+  .form__title {
+    width: 720px;
+  }
+
+  .form__fieldset {
+    width: 435px;
+  }
+
+  .form__application-wrapper {
+    width: 435px;
+  }
+
+   .form__fieldset--name {
+    width: 435px;
+  }
+}
