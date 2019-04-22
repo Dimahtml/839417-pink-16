@@ -1,22 +1,174 @@
 .features {
-  padding: 0 20px;
+  padding: 20px;
+  background-image: linear-gradient(175deg, white 25%, @light-grey 25%);
 }
 
-.features__list {
-  .reset-list();
-  background-color: @light-grey;
+.features__container {
+  margin: 0 auto;
+  width: 280px;
+
+  border: 1px dashed blue;
+}
+
+.features__inner {
+  margin: 0 auto;
+  width: 210px;
+
+  border: 1px solid orange;
 }
 
 .features__lead {
+  text-align: center;
   color: @dark-grey;
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
 }
 
-.features__subtitle {
+.features__list {
+  .reset-list();
+  margin-top: 100px;
+  padding-bottom: 280px;
+
+  border: 1px solid green;
+}
+
+.features__item {
+  border: 1px solid pink;
+}
+
+.features__item-title {
+  text-align: center;
   color: #000000;
   font-weight: 700px;
   font-size: 18px;
   line-height: 24px;
+}
+
+.features__item-text {
+  text-align: center;
+}
+
+.features__effect {
+  display: none;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .features__container {
+    width: 620px;
+  }
+
+  .features__inner {
+    width: 620px;
+  }
+
+  .features__lead {
+    margin: 0;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .features__lead--second {
+    margin: 0 140px;
+  }
+
+  .features__list {
+    padding-bottom: 0;
+    padding-left: 300px;
+    width: 310px;
+  }
+
+  .features__item-title {
+    text-align: left;
+  }
+
+  .features__item-text {
+    text-align: left;
+  }
+
+  .features__effect {
+    display: block;
+    padding-left: 300px;
+    width: 310px;
+
+    border: 1px solid red;
+  }
+
+  .features__effect-title {
+    margin-right: 140px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .features__effect-text {
+    margin-right: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .features__effect-link {
+    color: @pink;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .features__container {
+    width: 960px;
+  }
+
+  .features__inner {
+    width: 820px;
+  }
+
+  .features__lead {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .features__lead--second {
+    margin: 0 200px;
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: auto;
+    padding: 0;
+    padding-top: 360px;
+  }
+
+  .features__item {
+    width: 250px;
+  }
+
+  .features__item-title {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .features__item-text {
+    text-align: center;
+  }
+
+  .features__effect {
+    padding-left: 370px;
+    width: 570px;
+  }
+
+  .features__effect-text {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

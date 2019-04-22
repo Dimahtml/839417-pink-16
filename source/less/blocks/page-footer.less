@@ -1,2 +1,92 @@
-// page-footer.less
-// page-footer.less
+.page-footer--index {
+  display: none;
+}
+
+.page-footer__container {
+  width: 280px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+
+  border: 1px solid green;
+}
+
+.page-footer__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .reset-list();
+
+  border: 1px solid red;
+}
+
+.page-footer__item {
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__logo {
+  text-align: center;
+}
+
+.page-footer__link {
+  path {
+    fill: @pink;
+  }
+}
+
+.page-footer__link--academy {
+  margin-left: 15px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  border: 1px solid aqua;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .page-footer--index {
+    display: block;
+  }
+
+  .page-footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+
+    border: 1px solid red;
+  }
+
+  .page-footer__logo {
+    width: 150px;
+  }
+
+  .page-footer__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 180px;
+  }
+
+  .page-footer__copyright {
+    align-items: center;
+    width: 150px;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .page-footer__container {
+    width: 940px;
+  }
+}

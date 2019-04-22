@@ -1,22 +1,144 @@
+// * * * * * * * * * * M O B I L E * * * * * * * * * *
+
 .download {
-  padding: 20px 28px;
+  margin-top: -72px;
+  padding: 0;
 
   color: #ffffff;
   background-color: #1d2631;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }
 
 .download__btn {
+  display: block;
   padding: 15px 20px;
+  // width: 100%;
 
   color: #ffffff;
   background-color: transparent;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
+  text-decoration: none;
+  text-align: center;
 
   border: 3px solid #ffffff;
   border-top-left-radius: 23px 28px;
   border-top-right-radius: 23px 28px;
   border-bottom-right-radius: 23px 28px;
   border-bottom-left-radius: 23px 28px;
+}
+
+.download__container {
+  position: relative;
+  left: 50%;
+  margin-left: -160px;
+
+  padding-top: 462px;
+  min-height: 271px;
+  width: 320px;
+
+  border: 1px dashed lime;
+}
+
+.download__inner {
+  // position: relative;
+  // left: 50%;
+  // margin-left: -160px;
+
+  padding: 28px 20px;
+  width: 280px;
+
+  border: 1px solid red;
+}
+
+.download__slogan {
+  display: none;
+}
+
+.download__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border: 1px solid orange;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+
+  list-style: none;
+}
+
+.download__text {
+  margin-top: 28px;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .download {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .download__container {
+    padding-top: 180px;
+    min-height: 729px;
+    width: 620px;
+
+    margin-left: -310px;
+  }
+
+  .download__slogan {
+    display: block;
+    margin: 0;
+
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .download__inner {
+    position: static;
+    margin: 0;
+
+    width: 300px;
+  }
+
+  .download__text {
+    font-size: 18px;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .download {
+    margin-top: -110px;
+    min-height: 853px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .download__container {
+    width: 960px;
+
+    margin-left: -480px;
+  }
+
+  .download__slogan {
+    font-size: 50px;
+    line-height: 65px;
+  }
 }

@@ -1,3 +1,23 @@
-// .page-header {
+// * * * * * * * * * * M O B I L E * * * * * * * * * *
 
-// }
+.page-header {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 110px;
+  }
+
+  .page-header__container {
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 960px;
+  }
+}

@@ -1,49 +1,179 @@
+.price {
+  background-color: #f2f2f2;
+}
+
+.price__container {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
 .price__table {
-  border-collapse: collapse;
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  left: 0;
+  transform: translateX(-200%);
 }
 
-.price__header {
-  color: #ffffff;
-  background-color: @dark-grey;
+.price__column {
+  flex-shrink: 0;
+  width: 100%;
 
-  border-bottom: 2px solid @dark-grey;
-  border-left: 2px solid #e5e5e5;
-}
-
-.price__header:nth-child(2) {
-  border-left: 2px solid @dark-grey;
-  border-bottom: 2px solid @dark-grey;
-}
-
-.price__header:last-child {
-  border-right: 2px solid @dark-grey;
-}
-
-.price__header--clear {
-  background-color: transparent;
-  border: none;
+  background-color: #ffffff;
 }
 
 .price__data {
+  min-width: 280px;
+  min-height: 50px;
+
+  font-weight: 400;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 19px;
   color: @dark-grey;
+
+  border: 1px solid #e5e5e5;
+}
+
+.price__data--header {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100px;
+  padding: 20px;
+  padding-bottom: 12px;
+
+  color: #ffffff;
+  text-align: center;
   text-transform: uppercase;
 
-  border: 2px solid #e5e5e5;
+  background-color: @dark-grey;
+  border: 1px solid #e5e5e5;
 }
 
 .price__rate-name {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 5px;
 
   font-weight: 700;
   font-size: 18px;
-  line-height: 30px;
-  text-transform: uppercase;
+}
+
+.price__rate-name--hit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 74px;
+  height: 73px;
+
+  background-image: url("../img/bg-hit.svg");
+}
+
+.price__rate-name--hit::after {
+  content: "хит";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 74px;
+  height: 73px;
+
+  font-weight: 400;
+  font-size: 14px;
+
+  transform: rotate(-45deg);
 }
 
 .price__rate-price {
+  margin: 0;
+
   font-weight: 300;
   font-size: 24px;
-  line-height: 30px;
+}
+
+.price__data--empty {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.price__slider {
+  margin: 0 auto;
+  width: 60px;
+}
+
+
+// * * * * * * * * * * T A B L E T * * * * * * * * * *
+
+@media (min-width: @tablet-width) {
+  .price__container {
+    padding: 0;
+    width: 620px;
+
+    overflow: visible;
+  }
+
+  .price__table {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  .price__column {
+    flex-shrink: 0;
+    width: 25%;
+
+    background-color: #ffffff;
+  }
+
+  .price__data {
+    min-width: 0;
+    min-height: 50px;
+  }
+
+  .price__data--header {
+    min-height: 78px;
+  }
+
+  .price__rate-name {
+
+    font-size: 16px;
+  }
+
+  .price__rate-name--hit::before {
+    width: 61px;
+    height: 61px;
+
+    background-image: url("../img/bg-hit-tablet.svg");
+  }
+
+  .price__rate-name--hit::after {
+    top: 2px;
+    left: 2px;
+  }
+
+  .price__rate-price {
+    font-size: 18px;
+  }
+}
+
+// * * * * * * * * * * D E S K T O P * * * * * * * * * *
+
+@media (min-width: @desktop-width) {
+  .price__container {
+    width: 940px;
+  }
+
+  .price__data {
+    font-size: 18px;
+  }
+
+  .price__rate-name {
+    font-size: 18px;
+  }
+
+  .price__rate-price {
+    font-size: 24px;
+  }
 }
