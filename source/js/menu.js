@@ -2,6 +2,7 @@
 
 // Этот модуль скрывает и показывает элементы меню
 
+var menu = document.querySelector('.menu');
 var menuColored = document.querySelector('.menu--colored');
 var menuItemsHidden = document.querySelectorAll('.menu__item--hidden');
 var menuButton = document.querySelector('.menu__btn');
@@ -12,6 +13,8 @@ menuButton.addEventListener('click', function(evt) {
   for (var i = 0; i < menuItemsHidden.length; i++) {
     menuItemsHidden[i].classList.toggle('hidden');
   }
+  menu.classList.toggle('menu--closed');
+  menu.classList.toggle('menu--opened');
   menuColored.classList.toggle('menu--colored');
   menuItemLogo.classList.toggle('menu__item--no-shadow');
 });
