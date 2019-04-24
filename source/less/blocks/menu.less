@@ -152,11 +152,6 @@
 // * * * * * * * * * *   D E S K T O P   * * * * * * * * * *
 
 @media (min-width: @desktop-width) {
-
-          .page-header__container {
-            // border: 1px solid red;
-          }
-
   .menu {
     display: flex;
     flex-direction: row;
@@ -165,8 +160,6 @@
     margin: 0 auto;
     padding: 0;
     max-width: 940px;
-
-              // border: 1px solid yellow;
   }
 
   .menu--colored {
@@ -192,11 +185,27 @@
     flex-grow: 2;
 
     margin-left: auto;
+    padding-left: 50px;
   }
 
   .menu__list--site .menu__item {
     margin-left: 50px;
     box-shadow: none;
+  }
+
+  .menu__item--active {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+
+      bottom: -10px;
+
+      height: 2px;
+      width: 100%;
+      background-color: #ffffff;
+    }
   }
 
   .menu__link {
@@ -217,7 +226,7 @@
       color: #d22856;
     }
     &:active {
-      color: rgba(210, 40, 86, 0.3);
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -238,7 +247,7 @@
     }
     &:active {
       path {
-        fill: rgba(210, 40, 86, 0.3);
+        fill: rgba(255, 255, 255, 0.3);
       }
     }
   }
@@ -246,8 +255,6 @@
   .menu__link--logo svg {
     width: 147px;
     height: 40px;
-
-
   }
 
   .menu__btn {
