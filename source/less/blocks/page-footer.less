@@ -4,24 +4,22 @@
 
 .page-footer__container {
   width: 280px;
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
   margin: 0 auto;
 
-  border: 1px solid green;
+  // border: 1px solid green;
 }
 
 .page-footer__list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   .reset-list();
 
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .page-footer__item {
-  margin-right: 12px;
-
   &:last-child {
     margin-right: 0;
   }
@@ -32,13 +30,38 @@
 }
 
 .page-footer__link {
+  display: block;
+
+  box-sizing: border-box;
+  width: 51px;
+  height: 51px;
+
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+
+  text-align: center;
+  vertical-align: middle;
+
+  line-height: 50px;
+
   path {
     fill: @pink;
   }
 }
 
+.page-footer__link--youtube svg {
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
 .page-footer__link--academy {
   margin-left: 15px;
+
+  border: none;
+}
+
+.page-footer__link--academy  svg {
+  margin-top: 10px;
 }
 
 .page-footer__copyright {
@@ -46,7 +69,7 @@
   flex-direction: row;
   justify-content: center;
 
-  border: 1px solid aqua;
+  // border: 1px solid aqua;
 }
 
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
@@ -56,13 +79,20 @@
     display: block;
   }
 
+  .page-footer {
+    min-height: 127px;
+  }
+
   .page-footer__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 620px;
+    align-items: center;
 
-    border: 1px solid red;
+    width: 620px;
+    min-height: 127px;
+
+    // border: 1px solid red;
   }
 
   .page-footer__logo {
