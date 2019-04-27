@@ -48,6 +48,7 @@
         fill: @pink;
       }
     }
+
     &:active {
       path {
         fill: rgba(210, 40, 86, 0.3);
@@ -96,6 +97,7 @@
     &:focus {
       color: #d22856;
     }
+
     &:active {
       color: rgba(210, 40, 86, 0.3);
     }
@@ -117,6 +119,7 @@
         fill: @pink;
       }
     }
+
     &:active {
       path {
         fill: rgba(210, 40, 86, 0.3);
@@ -196,7 +199,7 @@
   .menu__item--active {
     position: relative;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
 
@@ -225,6 +228,7 @@
     &:focus {
       color: #d22856;
     }
+
     &:active {
       color: rgba(255, 255, 255, 0.3);
     }
@@ -235,7 +239,7 @@
     padding-bottom: 42px;
 
     text-align: left;
-    line-height: 0px;
+    line-height: 0;
   }
 
   .menu__link--logo[href] {
@@ -245,6 +249,7 @@
         fill: @pink;
       }
     }
+
     &:active {
       path {
         fill: rgba(255, 255, 255, 0.3);

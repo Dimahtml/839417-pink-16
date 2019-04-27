@@ -79,8 +79,8 @@
   position: relative;
 }
 
-.price__data--yes:after,
-.price__data--no:after {
+.price__data--yes::after,
+.price__data--no::after {
   content: "";
   position: absolute;
   top: 15px;
@@ -93,12 +93,12 @@
   background-position: center;
 }
 
-.price__data--yes:after {
+.price__data--yes::after {
   background-image: url("../img/icon-yes.svg");
   background-size: 31px;
 }
 
-.price__data--no:after {
+.price__data--no::after {
   background-image: url("../img/icon-no.svg");
   background-size: 27px;
 }
@@ -197,8 +197,8 @@
     text-transform: uppercase;
   }
 
-  .price__data--yes:after,
-  .price__data--no:after {
+  .price__data--yes::after,
+  .price__data--no::after {
     top: 10px;
     right: 60px;
   }
@@ -258,8 +258,8 @@
     min-height: 100px;
   }
 
-  .price__data--yes:after,
-  .price__data--no:after {
+  .price__data--yes::after,
+  .price__data--no::after {
     top: 17px;
     right: 100px;
   }
