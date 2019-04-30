@@ -3,25 +3,27 @@
 }
 
 .page-footer__container {
-  width: 280px;
-  padding-bottom: 40px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  border: 1px solid green;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .page-footer__list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   .reset-list();
 
-  border: 1px solid red;
+  width: 180px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .page-footer__item {
-  margin-right: 12px;
-
   &:last-child {
     margin-right: 0;
   }
@@ -32,21 +34,93 @@
 }
 
 .page-footer__link {
+  display: block;
+
   path {
     fill: @pink;
   }
+
+  &:active {
+    path {
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__logo-link {
+  &:hover,
+  &:focus {
+    path {
+      fill: @pink;
+    }
+  }
+
+  &:active {
+    path {
+      fill: @dark-grey;
+    }
+    opacity: 0.3;
+  }
+}
+
+.page-footer__list .page-footer__link {
+  box-sizing: border-box;
+  width: 51px;
+  height: 51px;
+
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+
+  text-align: center;
+  vertical-align: middle;
+
+  line-height: 50px;
+
+  &:hover,
+  &:focus {
+    border-color: @dark-grey;
+  }
+
+  &:active {
+    border-color: #e9ebec;
+
+    path {
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__copyright .page-footer__link {
+  &:hover,
+  &:focus {
+    path {
+      fill: @dark-grey;
+    }
+  }
+}
+
+.page-footer__link--youtube svg {
+  margin-left: 5px;
+  margin-bottom: 2px;
 }
 
 .page-footer__link--academy {
   margin-left: 15px;
+
+  border: none;
+}
+
+.page-footer__link--academy svg {
+  margin-top: 10px;
 }
 
 .page-footer__copyright {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 
-  border: 1px solid aqua;
+  font-size: 14px;
 }
 
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
@@ -56,13 +130,18 @@
     display: block;
   }
 
+  .page-footer {
+    min-height: 127px;
+  }
+
   .page-footer__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 620px;
+    align-items: center;
 
-    border: 1px solid red;
+    width: 620px;
+    min-height: 127px;
   }
 
   .page-footer__logo {
@@ -70,11 +149,7 @@
   }
 
   .page-footer__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    width: 180px;
+    margin: 0;
   }
 
   .page-footer__copyright {
