@@ -74,7 +74,7 @@
               <div class="form__inner form__inner--name">
                 <p class="form__item form__item--name">
                   <label for="second-name">Фамилия:</label>
-                  <input type="text" name="second-name" id="second-name" value="" placeholder="Укажите вашу фамилию *">
+                  <input type="text" name="second-name" id="second-name" value="" placeholder="Укажите фамилию *">
                 </p>
                 <p class="form__item form__item--name">
                   <label for="first-name">Имя:</label>
@@ -89,7 +89,9 @@
           </div>
           <div class="form__wrapper form__wrapper--achievements">
             <fieldset class="form__fieldset form__fieldset--achievements">
-              <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
+              <legend class="form__legend">
+                Ваши безбашенные&nbsp;<br>достижения в путешествии
+              </legend>
               <div class="form__inner form__inner--achievements">
                 <p class="form__item--achievements">
                   <input class="visually-hidden" type="checkbox" name="shark" id="shark" checked>
@@ -131,24 +133,24 @@
             <fieldset class="form__fieldset form__fieldset--application">
               <legend class="form__legend">С каким приложением путешествовали?</legend>
               <div class="form__inner">
-                <p class="">
-                  <input type="radio" name="application" value="ios" id="application-ios">
-                  <label for="application-ios" class="">Pink для iOS</label>
+                <p class="form__item--app">
+                  <input class="form__radio-input" type="radio" name="application" value="ios" id="application-ios" checked>
+                  <label class="form__radio-label" for="application-ios" class="">Pink для iOS</label>
                 </p>
-                <p class="">
-                  <input type="radio" name="application" value="android" id="application-android">
-                  <label for="application-android" class="">Pink на Android</label>
+                <p class="form__item--app">
+                  <input class="form__radio-input" type="radio" name="application" value="android" id="application-android">
+                  <label class="form__radio-label" for="application-android" class="">Pink на Android</label>
                 </p>
-                <p class="">
-                  <input type="radio" name="application" value="windows" id="application-windows">
-                  <label for="application-windows" class="">Windows Phone</label>
+                <p class="form__item--app">
+                  <input class="form__radio-input" type="radio" name="application" value="windows" id="application-windows">
+                  <label class="form__radio-label" for="application-windows" class="">Windows Phone</label>
                 </p>
               </div>
             </fieldset>
           </div>
           <div class="form__wrapper form__wrapper--description">
             <fieldset class="form__fieldset form__fieldset--description">
-              <legend class="form__legend">Опишите свои эмоции</legend>
+              <legend class="form__legend form__legend--description">Опишите свои эмоции</legend>
               <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
           </div>
