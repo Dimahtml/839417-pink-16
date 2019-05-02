@@ -69,9 +69,7 @@
 .img-upload__tab-title {
   text-align: center;
   cursor: pointer;
-}
 
-.img-upload__tab-title {
   path,
   rect {
     fill: rgba(40, 54, 69, 0.3);
@@ -153,6 +151,10 @@
   }
 
   .img-upload__picture {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
     height: 400px;
   }
 
@@ -173,12 +175,6 @@
     justify-content: space-between;
   }
 
-  .img-upload__picture {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-  }
-
   // -----icons & range-bar-----
 
   .img-upload__controls {
@@ -186,7 +182,7 @@
     flex-direction: column;
   }
 
-  .img-upload__tabs{
+  .img-upload__tabs {
     display: flex;
     flex-direction: column;
     width: 300px;
