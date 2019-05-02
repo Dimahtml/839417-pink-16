@@ -230,6 +230,9 @@
   .form__form {
     display: flex;
     flex-direction: column;
+
+    padding: 0 20px;
+    margin: 0 auto;
   }
 
   .form__title {
@@ -241,6 +244,13 @@
 
   .form__title span {
     display: inline;
+  }
+
+  .form__wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    margin-bottom: 39px;
   }
 
   .form__wrapper--name {
@@ -258,6 +268,7 @@
 
   .form__wrapper--application {
     order: -5;
+
     background-color: #ffffff;
   }
 
@@ -270,8 +281,20 @@
   }
 
   .form__fieldset {
+    box-sizing: border-box;
     width: 620px;
+    padding-top: 50px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+
+    margin-bottom: 20px;
+
     border: 2px solid #e5e5e5;
+  }
+
+  .form__fieldset--achievements {
+    padding-bottom: 0;
   }
 
   .form__fieldset--achievements br {
@@ -279,7 +302,26 @@
   }
 
   .form__fieldset--name {
+    padding: 0;
+    padding-top: 67px;
     border: none;
+  }
+
+  .form__fieldset--application {
+    padding-bottom: 16px;
+  }
+
+  .form__fieldset--contacts {
+    padding-top: 34px;
+    padding-bottom: 30px;
+  }
+
+  .form__fieldset--description {
+    padding-top: 30px;
+  }
+
+  .form__legend {
+    margin-bottom: 0;
   }
 
   .form__legend--contacts {
@@ -288,6 +330,16 @@
 
   .form__item {
     align-items: center;
+
+    margin-bottom: 50px;
+  }
+
+  .form__item--name label {
+    margin-left: 0;
+  }
+
+  .form__item--name:last-child {
+    margin-bottom: 0;
   }
 
   .form__item--name input {
@@ -296,15 +348,31 @@
     margin-left: 20px;
   }
 
+  .form__item--contacts {
+    margin-bottom: 36px;
+  }
+
+  .form__item--contacts:last-child {
+    margin-bottom: 0;
+  }
+
   .form__item--contacts input {
     order: -1;
+  }
+
+  .form__item--contacts label {
+    margin-top: 5px;
   }
 
   .form__inner {
     justify-content: space-between;
     align-items: center;
+  }
 
-    width: 620px;
+  .form__inner--submit {
+    width: 100%;
+
+    justify-content: space-between;
   }
 
   .form__button {
