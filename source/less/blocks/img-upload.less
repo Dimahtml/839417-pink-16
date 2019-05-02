@@ -1,5 +1,17 @@
 .img-upload {
+  position: relative;
+
   background-color: @light-grey;
+}
+
+.img-upload::after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 1px;
+  background-color: #dddfe0;
+  bottom: 202px;
 }
 
 .img-upload__title-wrapper {
@@ -18,25 +30,75 @@
   line-height: 30px;
   color: @dark-grey;
   text-align: center;
-
-  border: 1px solid red;
 }
 
 .img-upload__container {
   margin: 0 auto;
   padding-top: 20px;
+  padding-bottom: 40px;
   width: 280px;
 
   background-color: @light-grey;
-
-  border: 1px solid aqua;
 }
 
-.img-upload__filters {
-  padding-top: 42px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid #dddfe0;
+// -----icons & range-bar-----
+
+.img-upload__tabs {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.img-upload__tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 160px;
+  // padding-bottom: 50px;
+}
+
+.img-upload__radio {
+  display: none;
+}
+
+.img-upload__tab-title {
+  text-align: center;
+  cursor: pointer;
+
+  path,
+  rect {
+    fill: rgba(40, 54, 69, 0.3);
+  }
+}
+
+.img-upload__radio:checked + .img-upload__tab-title {
+  path,
+  rect {
+    fill: @pink;
+  }
+}
+
+.img-upload__tab-content {
+  display: none;
+
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+
+  width: 240px;
+  margin-bottom: 35px;
+}
+
+.img-upload__radio:checked ~ .img-upload__tab-content {
+  display: inline-block;
+}
+
+// ---buttons---
 
 .img-upload__buttons {
   display: flex;
@@ -46,17 +108,54 @@
 
 .img-upload__submit {
   margin-bottom: 12px;
+
+  color: @pink;
+  background-color: @light-grey;
+  border-color: @pink;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: @pink;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @pink;
+  }
 }
 
-.img-upload__list {
-  .reset-list();
+.img-upload__reset {
+  color: rgba(40, 54, 69, 0.1);
+  background-color: @light-grey;
+  border-color: rgba(40, 54, 69, 0.1);
+
+  &:hover,
+  &:focus {
+    color: rgba(40, 54, 69, 0.3);
+    border-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(40, 54, 69, 0.3);
+    border-color: #b5b9be;
+  }
 }
 
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
 
 @media (min-width: @tablet-width) {
-  .img-upload {
-    background-color: #ffffff;
+  .img-upload::after {
+    display: none;
+  }
+
+  .img-upload__picture {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    height: 400px;
   }
 
   .img-upload__title {
@@ -66,6 +165,7 @@
 
   .img-upload__container {
     padding-top: 55px;
+    padding-bottom: 55px;
     width: 620px;
   }
 
@@ -75,27 +175,42 @@
     justify-content: space-between;
   }
 
-  .img-upload__picture {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-
-    border: 1px solid brown;
-  }
+  // -----icons & range-bar-----
 
   .img-upload__controls {
     display: flex;
     flex-direction: column;
+  }
+
+  .img-upload__tabs {
+    display: flex;
+    flex-direction: column;
     width: 300px;
 
-    border: 1px solid brown;
+    border: none;
   }
 
-  .img-upload__filters {
-    padding-top: 9px;
-    padding-bottom: 0;
-    border-bottom: none;
+  .img-upload__tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 55px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #dddfe0;
   }
+
+  .img-upload__tab-content {
+    position: relative;
+    display: inline-block;
+    left: 0;
+
+    width: 202px;
+    margin: 0;
+  }
+
+  // ---buttons---
 
   .img-upload__buttons {
     margin-top: auto;
@@ -109,15 +224,27 @@
 // * * * * * * * * * * D E S K T O P * * * * * * * * * *
 
 @media (min-width: @desktop-width) {
+  .img-upload {
+    background-color: #ffffff;
+  }
+
   .img-upload__container {
     padding-right: 60px;
     padding-left: 80px;
     width: 800px;
   }
 
-  .img-upload__controls {
+  // -----icons & range-bar-----
+
+  .img-upload__tabs {
     width: 410px;
   }
+
+  .img-upload__tab-content {
+    width: 288px;
+  }
+
+  // ---buttons---
 
   .img-upload__buttons {
     display: flex;
@@ -127,5 +254,10 @@
 
   .img-upload__submit {
     margin: 0;
+    min-width: 184px;
+  }
+
+  .img-upload__reset {
+    min-width: 184px;
   }
 }
