@@ -83,8 +83,12 @@
   margin: 0 auto;
 }
 
-.form__inner--submit span {
+.form__submit-span--pink {
   color: @pink;
+}
+
+.form__submit-span--desk {
+  display: none;
 }
 
 .form__item {
@@ -282,7 +286,7 @@
 
   .form__fieldset {
     box-sizing: border-box;
-    width: 620px;
+    width: 100%;
     padding-top: 50px;
     padding-right: 60px;
     padding-bottom: 50px;
@@ -291,6 +295,10 @@
     margin-bottom: 20px;
 
     border: 2px solid #e5e5e5;
+  }
+
+  .form__fieldset textarea {
+    font-size: 18px;
   }
 
   .form__fieldset--achievements {
@@ -394,15 +402,22 @@
 
   .form__title {
     width: 720px;
+    margin-bottom: 67px;
   }
 
   .form__wrapper {
     width: 940px;
   }
 
-  .form__wrapper--name,
-  .form__wrapper--application {
+  .form__wrapper--name {
     width: 470px;
+    margin-bottom: 60px;
+  }
+
+  .form__wrapper--application {
+    width: 435px;
+    padding-left: 35px;
+    margin-bottom: 60px;
   }
 
   .form__fieldset {
@@ -411,30 +426,51 @@
     padding-left: 60px;
   }
 
+  .form__fieldset textarea {
+    height: 130px;
+  }
+
   .form__fieldset--name {
     height: 100%;
+    padding: 0;
     padding-right: 35px;
     padding-left: 0;
+    margin-bottom: 0;
   }
 
   .form__fieldset--application {
     height: 100%;
     padding-right: 0;
-    padding-left: 35px;
+    padding-bottom: 70px;
+    padding-left: 74px;
   }
 
   .form__fieldset--contacts {
     display: flex;
     justify-content: space-between;
+
+    padding-bottom: 13px;
   }
 
   .form__inner {
     width: auto;
   }
 
+  .form__inner--name {
+    padding-top: 12px;
+  }
+
   .form__inner--contacts {
     display: flex;
     flex-direction: row;
+  }
+
+  .form__inner--application {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
   }
 
   .form__inner--achievements {
@@ -454,7 +490,19 @@
     margin: 0;
   }
 
+  .form__item--contacts label {
+    margin-top: 10px;
+  }
+
   .form__item--achievements {
     width: 260px;
+  }
+
+  .form__radio-label {
+    margin: 0;
+  }
+
+  .form__submit-span--desk {
+    display: inline;
   }
 }

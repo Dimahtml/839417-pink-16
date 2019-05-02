@@ -132,7 +132,7 @@
           <div class="form__wrapper form__wrapper--application">
             <fieldset class="form__fieldset form__fieldset--application">
               <legend class="form__legend">С каким приложением путешествовали?</legend>
-              <div class="form__inner">
+              <div class="form__inner--application">
                 <p class="form__item--app">
                   <input class="form__radio-input" type="radio" name="application" value="ios" id="application-ios" checked>
                   <label class="form__radio-label" for="application-ios" class="">Pink для iOS</label>
@@ -157,7 +157,10 @@
           <div class="form__wrapper form__wrapper--submit">
             <div class="form__inner form__inner--submit">
               <button class="form__button" type="submit">Отправить форму</button>
-              <p><span>*</span> — обязательные поля</p>
+              <p>
+                <span class="form__submit-span--pink">*</span> — обязательные
+                <span class="form__submit-span--desk">для заполнения</span> поля
+              </p>
             </div>
           </div>
         </form>
