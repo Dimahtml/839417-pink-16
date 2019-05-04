@@ -107,6 +107,7 @@
   font-size: 18px;
   line-height: 30px;
   color: @dark-grey;
+  border: 2px solid #e5e5e5;
 }
 
 .form__item--name label,
@@ -124,7 +125,7 @@
   margin: 0;
 }
 
-// ----- checkboxes -----
+// ----- checkboxes [begin] -----
 
 .form__checkbox-input {
   display: none;
@@ -176,13 +177,13 @@
   display: block;
 }
 
-// ----------
+// ----- checkboxes [end] -----
 
 .form__item--app {
   margin: 0;
 }
 
-// ----- radio -----
+// ----- radio [begin] -----
 
 .form__radio-input {
   display: none;
@@ -235,7 +236,7 @@
   display: block;
 }
 
-// ----------
+// ----- radio [end] -----
 
 .form__button {
   width: 100%;
@@ -383,6 +384,8 @@
   }
 
   .form__item--contacts {
+    position: relative;
+
     margin-bottom: 36px;
   }
 
@@ -397,6 +400,36 @@
   .form__item--contacts label {
     margin-top: 5px;
   }
+
+  // ----- phone icon, mail icon [begin] -----
+
+  .form__item--contacts .form__input-contacts {
+    padding-right: 80px;
+  }
+
+  .form__item--contacts::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 62px;
+    height: 62px;
+
+    background-color: #e5e5e5;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .form__item--contacts--phone::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  .form__item--contacts--mail::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  // ----- phone icon, mail icon [end] -----
 
   .form__inner {
     justify-content: space-between;
@@ -454,6 +487,9 @@
 
   .form__fieldset textarea {
     height: 130px;
+
+    border: 2px solid #e5e5e5;
+    resize: vertical;
   }
 
   .form__fieldset--name {
