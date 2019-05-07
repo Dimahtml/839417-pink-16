@@ -142,7 +142,27 @@
   }
 }
 
-// * * * * * * * * * *   T A B L E T   &   N O T___D E S K T O P ) * * * * * * * * * *
+// * * * * * * * * * *  M O B I L E  * * * * * * * * * *
+
+@media (max-width: @tablet-width) {
+
+.icon-logo__small {
+    display: inline-block;
+
+    width: 75px;
+    height: 22px;
+  }
+
+  .icon-logo__middle {
+    display: none;
+  }
+
+  .icon-logo__large {
+    display: none;
+  }
+}
+
+// * * * * * * * * * *  O N L Y   T A B L E T  * * * * * * * * * *
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
   .menu__btn {
@@ -158,6 +178,26 @@
   .menu__link--logo svg {
     width: 147px;
     height: 40px;
+  }
+
+  // .menu__icon--logo {
+  //   width: 147px;
+  //   height: 40px;
+  // }
+
+  .icon-logo__small {
+    display: none;
+  }
+
+  .icon-logo__middle {
+    display: inline-block;
+
+    width: 147px;
+    height: 40px;
+  }
+
+  .icon-logo__large {
+    display: none;
   }
 }
 
@@ -275,4 +315,20 @@
   .menu__btn {
     display: none;
   }
+
+  .icon-logo__small {
+    display: none;
+  }
+
+  .icon-logo__middle {
+    display: none;
+  }
+
+  .icon-logo__large {
+    display: inline-block;
+
+    width: 147px;
+    height: 40px;
+  }
 }
+
