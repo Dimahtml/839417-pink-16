@@ -110,6 +110,15 @@
   border: 2px solid #e5e5e5;
 }
 
+.form__item input[type="text"]:hover {
+  border-color: @dark-grey;
+}
+
+.form__item input[type="text"]:focus {
+  border-color: @pink;
+  outline: none;
+}
+
 .form__item--name label,
 .form__item--contacts label {
   margin-left: 23px;
@@ -157,6 +166,15 @@
 
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
+}
+
+.form__checkbox-label:hover::before,
+.form__checkbox-label:focus::before {
+  border-color: @dark-grey;
+}
+
+.form__checkbox-label:active::before {
+  border-color: @pink;
 }
 
 .form__checkbox-label::after {
@@ -232,6 +250,15 @@
   border-radius: 50%;
 }
 
+.form__radio-label:hover::before,
+.form__radio-label:focus::before {
+  border-color: @dark-grey;
+}
+
+.form__radio-label:active::before {
+  border-color: @pink;
+}
+
 .form__radio-input:checked + .form__radio-label::after {
   display: block;
 }
@@ -253,6 +280,19 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &[disabled] {
+    background-color: #e5e5e5;
+  }
 }
 
 // * * * * * * * * * * T A B L E T * * * * * * * * * *
@@ -410,11 +450,11 @@
   .form__item--contacts::after {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 2px;
 
     width: 62px;
-    height: 62px;
+    height: 60px;
 
     background-color: #e5e5e5;
     background-repeat: no-repeat;
