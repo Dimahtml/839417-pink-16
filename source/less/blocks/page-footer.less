@@ -47,21 +47,42 @@
   }
 }
 
-.page-footer__logo-link {
-  &:hover,
-  &:focus {
-    path {
-      fill: @pink;
-    }
-  }
+// --- logo Pink --- [begin]
 
-  &:active {
-    path {
-      fill: @dark-grey;
-    }
-    opacity: 0.3;
+.icon-blue-logo__small {
+  display: inline-block;
+}
+
+.icon-blue-logo__large {
+  display: none;
+}
+
+.page-footer__logo-link:hover .icon-blue-logo__small--letters,
+.page-footer__logo-link:focus .icon-blue-logo__small--letters {
+  path {
+    fill: @pink;
   }
 }
+
+.page-footer__logo-link:hover .icon-blue-logo__large--letters,
+.page-footer__logo-link:focus .icon-blue-logo__large--letters {
+  path {
+    fill: @pink;
+  }
+}
+
+.page-footer__logo-link:active .icon-blue-logo__small--letters,
+.page-footer__logo-link:active .icon-blue-logo__large--letters {
+  path {
+    fill: @dark-grey;
+  }
+}
+
+.page-footer__logo-link:active {
+  opacity: 0.3;
+}
+
+// --- logo Pink --- [end]
 
 .page-footer__list .page-footer__link {
   box-sizing: border-box;
@@ -163,5 +184,13 @@
 @media (min-width: @desktop-width) {
   .page-footer__container {
     width: 940px;
+  }
+
+  .icon-blue-logo__small {
+    display: none;
+  }
+
+  .icon-blue-logo__large {
+    display: inline-block;
   }
 }
