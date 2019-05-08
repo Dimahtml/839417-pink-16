@@ -38,7 +38,7 @@
 
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position-x: 50%, 50%;
+  background-position-x: 0%, 50%;
   background-position-y: 100%, 0;
   background-size: 258px auto, cover;
 }
@@ -129,6 +129,7 @@
   }
 
   .download__text {
+    margin-top: 35px;
     font-size: 18px;
   }
 }
@@ -139,7 +140,7 @@
   .download {
     min-height: 853px;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
-    background-position-x: 65%, 50%;
+    background-position-x: 100%, 50%;
     background-position-y: 100%, 0;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -168,5 +169,9 @@
 
   .download__list {
     margin-top: 70px;
+  }
+
+  .download__text {
+    margin-top: 50px;
   }
 }
