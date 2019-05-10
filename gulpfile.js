@@ -52,7 +52,7 @@ gulp.task("sprite", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.src("build/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function() {
