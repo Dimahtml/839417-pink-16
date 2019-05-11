@@ -91,7 +91,8 @@
   display: none;
 }
 
-.form__item {
+.form__item--name,
+.form__item--contacts {
   display: flex;
   flex-wrap: wrap;
 
@@ -379,7 +380,8 @@
     display: block;
   }
 
-  .form__item {
+  .form__item--name,
+  .form__item--contacts {
     align-items: center;
 
     margin-bottom: 50px;
@@ -437,11 +439,11 @@
     background-position: center center;
   }
 
-  .form__item--contacts--phone::after {
+  .form__item--phone::after {
     background-image: url("../img/icon-phone.svg");
   }
 
-  .form__item--contacts--mail::after {
+  .form__item--mail::after {
     background-image: url("../img/icon-mail.svg");
   }
 
@@ -450,6 +452,10 @@
   .form__inner {
     justify-content: space-between;
     align-items: center;
+  }
+
+  .form__inner--application {
+    align-items: flex-start;
   }
 
   .form__inner--submit {
@@ -479,7 +485,7 @@
   }
 
   .form__title {
-    width: 720px;
+    width: 760px;
     margin-bottom: 67px;
   }
 
@@ -496,6 +502,10 @@
     width: 435px;
     padding-left: 35px;
     margin-bottom: 60px;
+  }
+
+  .form__wrapper--submit {
+    margin-bottom: 0;
   }
 
   .form__fieldset {
@@ -570,10 +580,6 @@
 
   .form__item--contacts label {
     margin-top: 10px;
-  }
-
-  .form__item--achievements {
-    width: 260px;
   }
 
   .form__radio-label {
